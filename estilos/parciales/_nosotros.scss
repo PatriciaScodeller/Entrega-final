@@ -7,6 +7,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+  
     &__title {
         position: relative;
         top: 10rem;
@@ -20,6 +21,7 @@
 }
 .description{
     background-color: black;
+    padding:  2rem;
 }
 .team-cards{
     display: flex;

@@ -678,7 +678,7 @@ body {
 
 .section-nosotros {
   background-color: black;
-  background-image: url(/proyecto-final/imagenes/equipo.png);
+  background-image: url(../imagenes/equipo.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -698,6 +698,7 @@ body {
 
 .description {
   background-color: black;
+  padding: 2rem;
 }
 
 .team-cards {
@@ -727,7 +728,7 @@ body {
 }
 
 .main {
-  background-image: url(/proyecto-final/imagenes/background-contacto.png);
+  background-image: url(../imagenes/background-contacto.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
