@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
-
+@import "../parciales/tipografia";
+@import "../parciales/responsive";
 
 [type="checkbox"]:checked,
 [type="checkbox"]:not(:checked){
@@ -223,6 +224,9 @@
 	display: block;
 	z-index: 11;
 	transition: all 250ms linear;
+  @include movil {
+    display: none;
+  }
 }
 .logo img {
 	height: 26px;
@@ -237,9 +241,6 @@
   .menu-icon:not(:checked) + label{
     right: 55px;
   
-  }
-  .logo {
-    display: none;
   }
  
   .nav{
