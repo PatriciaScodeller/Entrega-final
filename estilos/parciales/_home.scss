@@ -93,7 +93,6 @@ body {
 .section-center {
     position: absolute;
     overflow: hidden;
-    padding-left: 2.5rem;
     top: 25rem;
 }
 
@@ -130,27 +129,25 @@ body {
 
 .home-servicios {
     background-color: black;
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     height: auto;
     overflow: hidden;
     align-items: center;
     justify-items: center;
 
+    &__tag--title{
+        color: #5CFFC4;
+        font-size: 1.375rem;
+        font-weight: 700;
+    }
+    
     @include tablet {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        
     }
 
-        &__tag--title{
-            color: #5CFFC4;
-            font-size: 1.375rem;
-            border-bottom: 3px solid #5CFFC4;
-            
-        }
-    
-
     .plane-svg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         @include movil {
             display: none;
         }
@@ -177,23 +174,53 @@ body {
     }
 }
 
+.tag1{
+    ::after{
+        content: '';
+        width: 53px;
+        height: 4px;
+        bottom: -155px;
+        position: absolute;
+        left: 37px;
+        background-color: #5CFFC4;
+        border-radius: 3px; 
+        transition: all .2s ease-in-out;
+        }
+        :hover::after{
+            width: 100px;
+        }
+}
+
 // Proyectos home
 
 .home-proyectos {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.78)), url(../imagenes/background-servicios.jpg);
     height: 100vh;
-    &__title{
-        display: flex;
-        align-items: center;
-        padding-left: 8rem;
 
-        h2{
+    &__tag--title{
             color: #5CFFC4;
             font-size: 1.375rem;
-            border-bottom: 3px solid #5CFFC4;
-        }
+            font-weight: 700;
     }
 }
+
+.tag2{
+    ::after{
+        content: '';
+        width: 53px;
+        height: 4px;
+        bottom: -1015px;
+        position: absolute;
+        left: 37px;
+        background-color: #5CFFC4;
+        border-radius: 3px; 
+        transition: all .2s ease-in-out;
+        }
+        :hover::after{
+            width: 100px;
+        }
+}
+
 .proyecto-decor {
     display: flex;
     justify-content: flex-end;
