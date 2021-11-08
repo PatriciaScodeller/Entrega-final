@@ -1,5 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
 
-#carouselExampleIndicators {
-margin-top: 10rem;
+.proyectos-main{
+    height: 100vh;
+    background-color: #161820;
+
+    @include movil{
+        display: none;
+        }
+}
+
+.highlight{
+    background-image: url(../imagenes/homeit4w_main.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    @include tablet{
+        background-position: left;
+    }
+
+    &__desc{
+        background-image: url(../imagenes/main_proyecto_background.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.company-name{
+    h2{
+        color: #5CFFC4;
+        font-weight: 800;
+        font-size: 3rem;
+        line-height: 10rem;   
+    }
+    p{
+        color: #5CFFC4;
+        padding-top: 2rem;
+    }
+    a{
+        text-decoration: none;
+        color: #5CFFC4;
+        font-weight: 800;
+        border-bottom: solid 4px;
+        border-radius: 3px;
+        padding-bottom: 4px;
+    }
+}
+
+.proyectos-gallery{
+    background-color:#161820;
+}
+.text-title{
+    color: #6F3BED;
+    font-size: 1.25rem;
+}
+
+.image-filter{
+    height: 200px;
+    background-color: #161820;
+}
+
+.filter-items{
+    display: flex;
+    justify-content: space-evenly;
+   a {
+       text-decoration: none;
+
+       :hover{
+        border-bottom: solid 4px;
+        border-radius: 3px;
+        padding-bottom: 4px;
+        }
+   }
+    h4{
+        color:#5CFFC4;
+        font-size: 1rem;
+       
+    }
 }

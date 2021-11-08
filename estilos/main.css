@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap");
 [type="checkbox"]:checked,
 [type="checkbox"]:not(:checked) {
   position: absolute;
@@ -438,7 +439,7 @@ body {
 .section-center {
   position: absolute;
   overflow: hidden;
-  top: 25rem;
+  top: 20rem;
 }
 
 .section-center h1 {
@@ -618,7 +619,7 @@ body {
 
 .servicios-anchor {
   position: relative;
-  top: 12rem;
+  top: 15rem;
 }
 
 .servicios-anchor a {
@@ -626,15 +627,19 @@ body {
   color: #5CFFC4;
   font-size: 1.25rem;
   font-weight: 700;
+  border-bottom: solid 4px;
+  border-radius: 3px;
+  padding-bottom: 4px;
 }
 
 .contacto-home {
   padding-left: 3rem;
+  overflow: hidden;
 }
 
 .contacto-home h2 {
   color: #6F3BED;
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   font-weight: 700;
 }
 
@@ -648,12 +653,16 @@ body {
 @media screen and (max-width: 768px) {
   .contacto-home {
     padding: 0.5rem 3rem;
-    margin: 4rem;
   }
 }
 
 .contacto {
   height: auto;
+}
+
+.contacto h3 {
+  color: #656D8E;
+  font-size: 1.375rem;
 }
 
 .contacto-desc h3 {
@@ -684,6 +693,7 @@ body {
 
 .footer-surco {
   background-color: black;
+  height: 100px;
 }
 
 .footer-surco__copy {
@@ -746,8 +756,178 @@ body {
   font-weight: 200;
 }
 
-#carouselExampleIndicators {
-  margin-top: 10rem;
+.servicios-banner {
+  background-image: url(../imagenes/servicios-banner.png);
+  height: 253px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.servicios-banner h2 {
+  color: white;
+  font-size: 1.5rem;
+  position: relative;
+  top: 7rem;
+}
+
+.servicios-banner ::after {
+  content: '';
+  width: 53px;
+  height: 4px;
+  bottom: -15px;
+  position: absolute;
+  left: 0px;
+  background-color: white;
+  border-radius: 3px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.servicios-banner :hover::after {
+  width: 100px;
+}
+
+.servicios-main {
+  height: auto;
+  background-color: #161820;
+}
+
+.servicios-main span {
+  color: #5CFFC4;
+  font-weight: 200;
+  font-size: 1.25rem;
+  padding-right: 1rem;
+}
+
+.servicios-main a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #5CFFC4;
+  border-bottom: solid 3px;
+  border-radius: 3px;
+  padding-bottom: 4px;
+}
+
+.bullet-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bullet-items ul {
+  list-style: none;
+}
+
+.bullet-items ul li::before {
+  content: "\2022";
+  color: #5CFFC4;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.proyectos-main {
+  height: 100vh;
+  background-color: #161820;
+}
+
+@media screen and (max-width: 425px) {
+  .proyectos-main {
+    display: none;
+  }
+}
+
+.highlight {
+  background-image: url(../imagenes/homeit4w_main.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  .highlight {
+    background-position: left;
+  }
+}
+
+.highlight__desc {
+  background-image: url(../imagenes/main_proyecto_background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.company-name h2 {
+  color: #5CFFC4;
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 10rem;
+}
+
+.company-name p {
+  color: #5CFFC4;
+  padding-top: 2rem;
+}
+
+.company-name a {
+  text-decoration: none;
+  color: #5CFFC4;
+  font-weight: 800;
+  border-bottom: solid 4px;
+  border-radius: 3px;
+  padding-bottom: 4px;
+}
+
+.proyectos-gallery {
+  background-color: #161820;
+}
+
+.text-title {
+  color: #6F3BED;
+  font-size: 1.25rem;
+}
+
+.image-filter {
+  height: 200px;
+  background-color: #161820;
+}
+
+.filter-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.filter-items a {
+  text-decoration: none;
+}
+
+.filter-items a :hover {
+  border-bottom: solid 4px;
+  border-radius: 3px;
+  padding-bottom: 4px;
+}
+
+.filter-items h4 {
+  color: #5CFFC4;
+  font-size: 1rem;
 }
 
 .main {
