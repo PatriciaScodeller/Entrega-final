@@ -28,6 +28,9 @@
     background: white;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
+    @include movil{
+      font-size: 2rem;
+    }
   }
   
   .contact-form .form-field {
@@ -37,9 +40,10 @@
   .contact-form .input-text {
     display: block;
     width: 100%;
-    height: 36px;
+    height: 45px;
     border-width: 0 0 2px 0;
     border-bottom: 2px solid #5CFFC4;
+    border-radius: 3px;
     font-size: 18px;
     line-height: 26px;
     font-weight: 400;
@@ -70,7 +74,7 @@
     display: inline-block;
     background-color: #5CFFC4;
     border-radius: 5px;
-    color: white;
+    color: #5543ca;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 16px;

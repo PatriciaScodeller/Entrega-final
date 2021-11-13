@@ -224,10 +224,24 @@
 	display: block;
 	z-index: 11;
 	transition: all 250ms linear;
-  @include movil {
+  @include movil{
     display: none;
+
   }
 }
+
+.logoiso{
+  display: none;
+  @include movil{
+    position: absolute;
+    top: 60px;
+    left: 50px;
+    display: block;
+    z-index: 11;
+    transition: all 250ms linear;
+  }
+}
+
 .logo img {
 	height: 26px;
 	width: auto;

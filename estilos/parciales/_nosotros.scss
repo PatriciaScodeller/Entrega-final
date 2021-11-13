@@ -3,10 +3,10 @@
 
 .section-nosotros{
     background-color: black;
-    background-image: url(../imagenes/equipo.png);
+    background-image: url(../imagenes/banner-nosotros.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 300px;
   
     &__title {
         position: relative;
@@ -16,25 +16,115 @@
             font-size: 1.5rem;
             font-weight: 700;
             border-bottom: 3px solid white;
+            padding-bottom: 5px;
+            border-radius: 2px;
         }
     }
 }
-.description{
-    background-color: black;
-    padding:  2rem;
+.text-disp{
+    position: relative;
+    top: 3.5rem;
 }
-.team-cards{
+.background-equipo{
+    background-image: url(../imagenes/background-equipo.png);
+    background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     justify-content: center;
-    background-color: black;  
-    &__desc{
-        background-color: black;
-        height: 15rem;
-        h3{
-            font-size: 1.25rem;
-            line-height: 3rem;
-            color: #5CFFC4;
-            font-weight: 200;
-        }
+    padding-left: 10rem;
+    @include movil {
+        display: none; 
     }
 }
+.equipo-img{
+    @include tablet{
+        display: none;
+    }
+    @include desktop{
+        display: none;
+    }
+}
+
+.description{
+    background-color: #161820;
+    padding: 2rem;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    font-size: 1.5rem;
+    @include tablet{
+        align-items: flex-start;
+        height: auto;
+    }
+    p{
+        @include tablet{
+            font-size: 1.2rem;
+        @include movil{
+            font-size: 1rem;
+        }
+
+        }
+    }
+
+    h3{
+        color: #5CFFC4;
+        font-size: 2.2rem;
+        font-weight: 800; 
+        line-height: 4rem;
+        @include tablet{
+            line-height: 3.5rem;
+            padding-bottom: 2rem;
+        }
+        @include movil{
+            font-size: 1.5rem;
+            line-height: 1.8rem;
+        }
+    }
+
+}
+.iso-logo{
+    @include tablet{
+    display: none;
+    }
+}
+.team-cards{
+    background-color: #161820;  
+    height: auto;
+    background-image: url(../imagenes/background-hex.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include movil{
+        background: none;
+    }
+    @include tablet{
+        background: none;
+    }    
+    
+    h5{
+        color: #5CFFC4;
+        font-weight: 700;
+        font-size: 1.5rem;
+        padding-top: 3rem;
+    }
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 6rem;
+}
+ .card-img-team{
+     max-width: 100%;
+     height: auto;
+     position: relative;
+     top: 4rem;
+     @include movil{
+         width: 70%;
+     }
+ }
