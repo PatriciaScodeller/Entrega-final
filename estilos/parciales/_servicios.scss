@@ -16,20 +16,6 @@
         position: relative;
         top: 7rem;
     }
-    ::after{
-        content: '';
-        width: 53px;
-        height: 4px;
-        bottom: -15px;
-        position: absolute;
-        left: 0px;
-        background-color: white;
-        border-radius: 3px; 
-        transition: all .2s ease-in-out;
-        }
-        :hover::after{  
-            width: 100px;
-      }
 }
 
 .servicios-main{

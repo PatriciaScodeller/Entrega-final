@@ -39,19 +39,29 @@ body {
 
     &__tag {
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-end;
+        justify-content: flex-start;
         position: relative;
         height: auto;
-        top: 15rem;
+        top: 10rem;
+        padding-left: 3.5rem;
+        
+    span{
+        font-size: 1.5rem;
+        padding-left: 1rem;
         @include movil{
-            justify-content: start;
-            left: 35px;
+            display: none;
         }
-    
+        @include tablet{
+            display: none;
+        }
+        @include desktop{
+            display: none;
+        }
+    }
         & h2 {
             color: #6F3BED;
-            size: 1.5rem;
+            font-size: 1.5rem;
             font-weight: 700;
             @include movil{
                 font-size: 1.7rem;
@@ -59,34 +69,12 @@ body {
         }
     }
 
-    &__bajada{
-        position: relative;
-        display: flex;
-        align-items: center;
-        height: auto;
-        top: 15rem;
-        
-        h3{
-            color: white;
-            font-size: 1.25rem;
-            font-weight: 200;
-
-            @include tablet{
-                span{
-                    display: none;
-                }
-            }
-            @include movil {
-                display: none;
-            }
-        }
-    }
 }
 
 
 .cruz-svg {
     position: relative;
-    top: 15rem;
+    top: 12rem;
 
     @include movil{
         display: none;
@@ -96,28 +84,26 @@ body {
 .section-center {
     position: absolute;
     overflow: hidden;
-    top: 20rem;
+    top: 18rem;
 }
 
 .section-center h1 {
-    font-size: 6rem;
+    font-size: 4.5rem;
 
     @include tablet {
-        font-size: 3.5rem;
+        font-size: 3rem;
         padding-right: 5rem;
-        br{
-            display: none;
-        }
+    }
     @include movil{
-        font-size: 1.9rem;
+        font-size: 2.5rem;
         padding-right: 1rem;
-        br{
-            display: none;
-        }
     }
-    }
-}
+//     } 
+//     @include desktop{
+//       font-size: 4.2rem;
+//   }
 
+}
 
 .section-center span {
     color: #5CFFC4;
@@ -125,7 +111,7 @@ body {
 }
 
 .home-cta {
-    padding: 2rem 0rem;
+    padding: 5rem 0rem;
 }
 
 // Seccion servicios home
@@ -173,22 +159,6 @@ body {
     }
 }
 
-.tag1{
-    ::after{
-        content: '';
-        width: 53px;
-        height: 4px;
-        bottom: -140px;
-        position: absolute;
-        left: 37px;
-        background-color: #5CFFC4;
-        border-radius: 3px; 
-        transition: all .2s ease-in-out;
-        }
-        :hover::after{
-            width: 100px;
-        }
-}
 
 // Proyectos home
 
@@ -205,41 +175,22 @@ body {
     }
 }
 
-.tag2{
-    ::after{
-        content: '';
-        width: 53px;
-        height: 4px;
-        bottom: -995px;
-        position: absolute;
-        left: 37px;
-        background-color: #5CFFC4;
-        border-radius: 3px; 
-        transition: all .2s ease-in-out;
-        @include tablet{
-        bottom: -1640px;
-        }
-        @include movil{
-            bottom: -2925px;
-        }
-        }
-        :hover::after{
-            width: 100px;
-        }
-}
 
 .proyecto-decor {
     display: flex;
     justify-content: flex-end;
+    @include movil{
+        display: none;
+    }
 }
 
 
 .swiper {
     width: 100%;
     height: 50%;
-    top: 10rem;
+    top: 3rem;
     @include tablet{
-        top: 3.5rem;
+        top: 1rem;
     }
 }
 
@@ -274,7 +225,7 @@ body {
 
 .servicios-anchor {
     position: relative;
-    top: 15rem;
+    top: 7rem;
     @include tablet{
         top: 7rem;
     }
@@ -295,33 +246,29 @@ body {
 .contacto-home {
     padding-left: 3rem;
     overflow: hidden;
-    
-    & h2 {
+    h2 {
         color: #6F3BED;
         font-size: 1.375rem;
-        font-weight: 700;  
-
-    }
+        font-weight: 700; 
+    
+    span{
+        color: #656D8E;
+        font-weight: 400;
+        @include movil{
+            display: none
+        }
+    }     
+ }
+}
     @include tablet {
         padding: 0.5rem 3rem;
 
     }
-}
+
 
 .contacto {
     height: auto;
     background-color: white;
-
-    & h3 {
-        color: #656D8E;
-        font-size: 1.375rem;
- }
-}
-.tagline{
-
-    @include movil{
-        display: none;
-    }
 }
 
 .contacto-desc h3 {
